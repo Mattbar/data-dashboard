@@ -5,7 +5,8 @@ function formatter(value){
       return '$' + value;
     }
 
-var line = document.getElementById('line-chart').getContext('2d');
+window.onload = function(){
+  var line = document.getElementById('line-chart').getContext('2d');
 
 var myLine = new Chart(line,{
   type:'line',
@@ -61,8 +62,9 @@ var myLine = new Chart(line,{
             function(value, index, values) {
               return formatter(value);
             } 
-    }
-}]
+        }
+      }]
     }
   }
 })
+}
