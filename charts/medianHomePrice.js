@@ -15,7 +15,7 @@ var myLine = new Chart(line,{
     datasets:[
       {
         label:"Crook county",
-        data:[0,95400,93100,130000,154000,137000,163000,222000,248000],
+        data:[null,95400,93100,130000,154000,137000,163000,222000,248000],
         fill:false,
         borderColor:"rgb(75,192,192)",
         lineTension:0.1
@@ -29,7 +29,7 @@ var myLine = new Chart(line,{
       },
       {
         label:"Jefferson county",
-        data:[0,0,0,154000,125000,143000,143000,170000,211000],
+        data:[null,null,null,154000,125000,143000,143000,170000,211000],
         fill:false,
         borderColor:"red",
         lineTension:0.1
