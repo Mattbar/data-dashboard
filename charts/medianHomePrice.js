@@ -5,7 +5,9 @@ function formatter(value){
       return '$' + value;
     }
 
-window.onload = function(){
+
+
+  function creatLine (){
   var line = document.getElementById('line-chart').getContext('2d');
 
 var myLine = new Chart(line,{
@@ -49,10 +51,7 @@ var myLine = new Chart(line,{
         label: function(toolTipItem){
             return formatter(toolTipItem.yLabel)
           }
-        
-
       }
-
     },
     scales: {
       yAxes: [{
@@ -68,3 +67,7 @@ var myLine = new Chart(line,{
   }
 })
 }
+
+
+
+
