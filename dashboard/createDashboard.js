@@ -1,4 +1,4 @@
-window.onload = function(){
-  creatLine()
-  createPie()
-}
+window.onload = function() {
+  creatLine();
+  createPie();
+};
