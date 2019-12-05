@@ -1,4 +1,4 @@
 window.onload = function() {
   creatLine();
-  createPie();
+  createMapChart();
 };

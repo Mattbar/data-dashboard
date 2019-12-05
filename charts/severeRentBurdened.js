@@ -1,31 +1,18 @@
-function pieFormat(value) {
-  value = value.toString();
-  return value + "%";
-}
+function createMapChart() {
+  var divElement = document.getElementById("rentBurdenMap");
+  var vizElement = divElement.getElementsByTagName("object")[0];
 
-function createPie() {
-  var pie = document.getElementById("pie-chart").getContext("2d");
-
-  var myPie = new Chart(pie, {
-    type: "pie",
-    data: {
-      labels: ["Crook", "Deschutes", "Jefferson"],
-      datasets: [
-        {
-          data: [19.2, 24.5, 19.7],
-          fill: false,
-          borderColor: "rgb(75,192,192)",
-          backgroundColor: ["rgb(75,192,192)", "rgb(54, 162, 235)", "red"]
-        }
-      ]
-    },
-    options: {
-      title: {
-        display: true,
-        text: "% Severe Rent Burdened in Central Oregon",
-        fontSize: 20,
-        fontColor: "blue"
-      }
-    }
-  });
+  if (divElement.offsetWidth > 800) {
+    vizElement.style.width = "1000px";
+    vizElement.style.height = "827px";
+  } else if (divElement.offsetWidth > 500) {
+    vizElement.style.width = "1000px";
+    vizElement.style.height = "827px";
+  } else {
+    vizElement.style.width = "100%";
+    vizElement.style.height = "727px";
+  }
+  var scriptElement = document.createElement("script");
+  scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+  vizElement.parentNode.insertBefore(scriptElement, vizElement);
 }
