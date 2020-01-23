@@ -1,4 +1,5 @@
 window.onload = function() {
-  creatLine();
-  createMapChart();
+  // creatLine();
+  createDashboard();
+  //createMapChart();
 };
